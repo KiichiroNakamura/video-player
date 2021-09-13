@@ -1,0 +1,198 @@
+body {
+  background: #222;
+  color: #777;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.player {
+  width: 500px;
+  height: 282px;
+  margin: 0 auto;
+  border: 1px solid #111;
+  background: rgb(43, 43, 43);
+  overflow: hidden;
+  position: relative;
+}
+.mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.layer-setting {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  display: none;
+}
+.layer-setting.visible {
+  display: block;
+}
+.layer-setting_modal {
+  margin: 8% auto 0 auto;
+  background: #333;
+  width: 350px;
+  height: 180px;
+  padding: 15px;
+}
+.modal-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.modal-close {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  position: relative;
+  height: 15px;
+}
+.modal-close button {
+  position: absolute;
+  top: -5px;
+}
+.content-list {
+  width: 46%;
+  text-align: left;
+}
+.content-list span {
+  color: white;
+  height: 25px;
+  font-size: 14px;
+  display: block;
+}
+.content-list li {
+  list-style: none;
+  font-size: 13px;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 2px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+video {
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+}
+.top-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 30px;
+  background: linear-gradient(#111, transparent);
+  line-height: 30px;
+  transform: translateY(0);
+  transition: 0.5s transform;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0 10px;
+}
+.top-bar.active {
+  transform: translateY(-30px);
+}
+.top-bar_back {
+  font-size: 20px;
+}
+.top-bar_title {
+  font-size: 14px;
+  margin-left: 5px;
+  width: calc(100% - 50px);
+  text-align: left;
+}
+.controls {
+  transform: translateY(0);
+  transition: 0.5s transform;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  height: 40px;
+  background: linear-gradient(transparent, #111);
+  display: flex;
+  align-items: center;
+}
+.controls.active {
+  transform: translateY(40px);
+}
+.controls .button--play {
+  width: 40px;
+  font-size: 22px;
+}
+.controls .button--server {
+  font-size: 22px;
+}
+.chromecast {
+  width: 20px;
+}
+.chromecast path {
+  fill: rgba(255, 255, 255, 0.5);
+}
+.progress {
+  display: flex;
+  position: relative;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  margin: 5px 0;
+  width: calc(100% - 160px);
+}
+.progress__bar {
+  background: white;
+  height: 4px;
+  width: 20%;
+  border-radius: 20px;
+}
+.progress-count {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 5px;
+}
+.lang {
+  padding: 1px 5px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+.lang i {
+  font-size: 12px;
+  margin-right: 4px;
+}
+.lang span {
+  position: relative;
+  bottom: -1px;
+}
+button {
+  background: transparent;
+  border: 1px solid #444;
+  color: white;
+  border-radius: 4px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+button:hover {
+  background: red;
+  border-color: red;
+}

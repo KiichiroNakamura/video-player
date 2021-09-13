@@ -1,0 +1,20 @@
+.background {
+  background: #08212f;
+}
+
+.logo {
+  background-image: url(http://pelisplus.co/assets/img/coverfb.jpg);
+}
+
+.progressBar {
+  background-color: rgb(238, 255, 65);
+}
+
+.splash {
+  background-color: #00446c;
+}
+
+.watermark {
+  background-size: 197px 55px;
+  background-image: url(http://pelisplus.co/assets/img/pelisplus.png);
+}
